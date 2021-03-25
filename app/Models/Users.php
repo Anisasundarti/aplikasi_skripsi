@@ -54,7 +54,7 @@ class Users extends Model
         'email_verified_at' => 'datetime',
         'password' => 'string',
         'alamat' => 'string',
-        'telepon' => 'integer',
+        'telepon' => 'string',
         'remember_token' => 'string'
     ];
 
@@ -69,7 +69,7 @@ class Users extends Model
         'email_verified_at' => 'nullable',
         'password' => 'required|string|max:255',
         'alamat' => 'nullable|string|max:255',
-        'telepon' => 'nullable|integer',
+        'telepon' => 'nullable|string',
         'remember_token' => 'nullable|string|max:100',
         'created_at' => 'nullable',
         'updated_at' => 'nullable',

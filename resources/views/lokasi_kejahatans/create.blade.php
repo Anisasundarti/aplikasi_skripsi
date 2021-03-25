@@ -11,11 +11,14 @@
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'lokasiKejahatans.store']) !!}
-
+                    <!-- {!! Form::open(['route' => 'lokasiKejahatans.store']) !!} -->
+                    <form action="{{route('lokasiKejahatans.store')}}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        @method('POST')
                         @include('lokasi_kejahatans.fields')
+                    </form>
 
-                    {!! Form::close() !!}
+                    <!-- {!! Form::close() !!} -->
                 </div>
             </div>
         </div>

@@ -1,0 +1,5 @@
+Nomor telepon penting polisi :
+polisi : 110
+keadaan darurat : 112
+pemadakam kebakaran : 113
+gangguan listrik : 123

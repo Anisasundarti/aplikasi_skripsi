@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>SIG DAERAH RAWAN KEJAHATAN KOTA SAMARINDA</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -12,14 +12,16 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #1E90FF;
+                color: #FFFFFF;
+                border: 100px;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                font-weight: bold ;
+                font-style: italic ;
                 height: 100vh;
                 margin: 0;
             }
-
+            
             .full-height {
                 height: 100vh;
             }
@@ -45,11 +47,11 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 40px;
             }
 
             .links > a {
-                color: #636b6f;
+                color: #FFFFFF;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -81,19 +83,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <img src="{{asset('Lambang_Polri.png')}}"style="width: 300px;height: 300px;"> 
+                    <br> SISTEM INFORMASI GEOGRAFIS
+                    <br> DAERAH RAWAN KEJAHATAN KOTA SAMARINDA 
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
             </div>
         </div>
     </body>

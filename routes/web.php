@@ -30,3 +30,7 @@ Route::resource('lokasiKejahatans', 'LokasiKejahatanController');
 Route::resource('jenisKejahatans', 'JenisKejahatanController');
 
 Route::resource('users', 'UsersController');
+
+Route::resource('lokasiKejahatans', 'LokasiKejahatanController');
+
+Route::get('/Peta-Lokasi',"PetaController@index")->name('peta.index');

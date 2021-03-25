@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class LokasiKejahatanRepository
  * @package App\Repositories
- * @version December 18, 2020, 12:28 am UTC
+ * @version February 24, 2021, 10:57 am UTC
 */
 
 class LokasiKejahatanRepository extends BaseRepository
@@ -18,12 +18,14 @@ class LokasiKejahatanRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'id_jenis_kejahatan',
-        'nama_lokasi',
         'alamat',
         'gambar',
         'deskripsi',
-        'latitude',
-        'longitude'
+        'tahun_kejadian',
+        'kelurahan',
+        'kecamatan',
+        'potensi_kerawanan',
+        'koordinat'
     ];
 
     /**

@@ -9,12 +9,14 @@ $factory->define(Lokasi_kejahatan::class, function (Faker $faker) {
 
     return [
         'id_jenis_kejahatan' => $faker->randomDigitNotNull,
-        'nama_lokasi' => $faker->word,
         'alamat' => $faker->word,
         'gambar' => $faker->word,
         'deskripsi' => $faker->word,
-        'latitude' => $faker->word,
-        'longitude' => $faker->word,
+        'tahun_kejadian' => $faker->word,
+        'kelurahan' => $faker->word,
+        'kecamatan' => $faker->word,
+        'potensi_kerawanan' => $faker->word,
+        'koordinat' => $faker->word,
         'created_at' => $faker->date('Y-m-d H:i:s'),
         'updated_at' => $faker->date('Y-m-d H:i:s'),
         'deleted_at' => $faker->date('Y-m-d H:i:s')

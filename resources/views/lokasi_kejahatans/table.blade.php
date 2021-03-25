@@ -2,26 +2,34 @@
     <table class="table" id="lokasiKejahatans-table">
         <thead>
             <tr>
-                <th>Id Jenis Kejahatan</th>
-        <th>Nama Lokasi</th>
-        <th>Alamat</th>
-        <th>Gambar</th>
-        <th>Deskripsi</th>
-        <th>Latitude</th>
-        <th>Longitude</th>
+                <th>No</th>
+                <th>Jenis Kejahatan</th>
+                <th>Alamat</th>
+                <th>Deskripsi</th>
+                <th>Tahun Kejadian</th>
+                <th>Kelurahan</th>
+                <th>Kecamatan</th>
+                <th>Potensi Kerawanan</th>
+                <th>Koordinat</th>
+                <th>Gambar</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
         @foreach($lokasiKejahatans as $lokasiKejahatan)
             <tr>
-                <td>{{ $lokasiKejahatan->id_jenis_kejahatan }}</td>
-            <td>{{ $lokasiKejahatan->nama_lokasi }}</td>
-            <td>{{ $lokasiKejahatan->alamat }}</td>
-            <td>{{ $lokasiKejahatan->gambar }}</td>
-            <td>{{ $lokasiKejahatan->deskripsi }}</td>
-            <td>{{ $lokasiKejahatan->latitude }}</td>
-            <td>{{ $lokasiKejahatan->longitude }}</td>
+                <td>{{ $no++ }}</td>
+                <td>{{ $lokasiKejahatan->JenisKejahatan->jenis_kejahatan }}</td>
+                <td>{{ $lokasiKejahatan->alamat }}</td>
+                <td>{{ $lokasiKejahatan->deskripsi }}</td>
+                <td>{{ $lokasiKejahatan->tahun_kejadian }}</td>
+                <td>{{ $lokasiKejahatan->kelurahan }}</td>
+                <td>{{ $lokasiKejahatan->kecamatan }}</td>
+                <td>{{ $lokasiKejahatan->potensi_kerawanan }}</td>
+                <td>{{ $lokasiKejahatan->koordinat }}</td>
+                <td>
+                    <img src="{{asset('file_gambar/'.$lokasiKejahatan->gambar)}}" style="width:100px;heigth:100px;" alt="">
+                </td>
                 <td>
                     {!! Form::open(['route' => ['lokasiKejahatans.destroy', $lokasiKejahatan->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

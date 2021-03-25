@@ -30,9 +30,9 @@ class JenisKejahatanController extends AppBaseController
     public function index(Request $request)
     {
         $jenisKejahatans = $this->jenisKejahatanRepository->all();
-
-        return view('jenis_kejahatans.index')
-            ->with('jenisKejahatans', $jenisKejahatans);
+        $no =1;
+        return view('jenis_kejahatans.index',compact('jenisKejahatans','no'));
+            
     }
 
     /**

@@ -34,7 +34,10 @@
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="{{ url('/home') }}"><b>InfyOm </b>Generator</a>
+       <img src="{{asset('Lambang_Polri.png')}}" style="width: 100px;height: 100px;">
+        <br><h3>
+         SIG Daerah Rawan Kejahatan Di Kota Samarinda </h3> 
+        <!-- <a href="{{ url('/home') }}"><b>SIG Daerah Rawan Kejahatan di Kota Samarinda</b></a> -->
     </div>
 
     <div class="register-box-body">
@@ -53,6 +56,28 @@
                     </span>
                 @endif
             </div>
+            <div class="form-group has-feedback{{ $errors->has('alamat') ? ' has-error' : '' }}">
+                <input type="text" class="form-control" name="alamat" value="{{ old('alamat') }}" placeholder="Alamat">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
+                @if ($errors->has('alamat'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('alamat') }}</strong>
+                    </span>
+                @endif
+            </div>
+            <div class="form-group has-feedback{{ $errors->has('telepon') ? ' has-error' : '' }}">
+                <input type="text" class="form-control" name="telepon" value="{{ old('telepon') }}" placeholder="Telepon">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
+                @if ($errors->has('telepon'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('telepon') }}</strong>
+                    </span>
+                @endif
+            </div>
+
+
 
             <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
                 <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">

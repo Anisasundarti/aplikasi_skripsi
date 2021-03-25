@@ -30,9 +30,8 @@ class UsersController extends AppBaseController
     public function index(Request $request)
     {
         $users = $this->usersRepository->all();
-
-        return view('users.index')
-            ->with('users', $users);
+        $no =1;
+        return view('users.index',compact('users','no'));
     }
 
     /**

@@ -2,6 +2,7 @@
     <table class="table" id="jenisKejahatans-table">
         <thead>
             <tr>
+                <th>No</th>
                 <th>Jenis Kejahatan</th>
                 <th colspan="3">Action</th>
             </tr>
@@ -9,6 +10,7 @@
         <tbody>
         @foreach($jenisKejahatans as $jenisKejahatan)
             <tr>
+                <td>{{ $no++}} </td>
                 <td>{{ $jenisKejahatan->jenis_kejahatan }}</td>
                 <td>
                     {!! Form::open(['route' => ['jenisKejahatans.destroy', $jenisKejahatan->id], 'method' => 'delete']) !!}

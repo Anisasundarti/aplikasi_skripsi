@@ -4,11 +4,6 @@
     <p>{{ $lokasiKejahatan->id_jenis_kejahatan }}</p>
 </div>
 
-<!-- Nama Lokasi Field -->
-<div class="form-group">
-    {!! Form::label('nama_lokasi', 'Nama Lokasi:') !!}
-    <p>{{ $lokasiKejahatan->nama_lokasi }}</p>
-</div>
 
 <!-- Alamat Field -->
 <div class="form-group">
@@ -28,15 +23,45 @@
     <p>{{ $lokasiKejahatan->deskripsi }}</p>
 </div>
 
-<!-- Latitude Field -->
+<!-- Tahun Kejadian Field -->
 <div class="form-group">
-    {!! Form::label('latitude', 'Latitude:') !!}
-    <p>{{ $lokasiKejahatan->latitude }}</p>
+    {!! Form::label('tahun_kejadian', 'Tahun Kejadian:') !!}
+    <p>{{ $lokasiKejahatan->tahun_kejadian }}</p>
 </div>
 
-<!-- Longitude Field -->
+<!-- Kelurahan Field -->
 <div class="form-group">
-    {!! Form::label('longitude', 'Longitude:') !!}
-    <p>{{ $lokasiKejahatan->longitude }}</p>
+    {!! Form::label('kelurahan', 'Kelurahan:') !!}
+    <p>{{ $lokasiKejahatan->kelurahan }}</p>
+</div>
+
+<!-- Kecamatan Field -->
+<div class="form-group">
+    {!! Form::label('kecamatan', 'Kecamatan:') !!}
+    <p>{{ $lokasiKejahatan->kecamatan }}</p>
+</div>
+
+<!-- Potensi Kerawanan Field -->
+<div class="form-group">
+    {!! Form::label('potensi_kerawanan', 'Potensi Kerawanan:') !!}
+    <p>{{ $lokasiKejahatan->potensi_kerawanan }}</p>
+</div>
+
+<!-- Koordinat Field -->
+<div class="form-group">
+    {!! Form::label('koordinat', 'Koordinat:') !!}
+    <p>{{ $lokasiKejahatan->koordinat }}</p>
+</div>
+
+<!-- Created At Field -->
+<div class="form-group">
+    {!! Form::label('created_at', 'Created At:') !!}
+    <p>{{ $lokasiKejahatan->created_at }}</p>
+</div>
+
+<!-- Updated At Field -->
+<div class="form-group">
+    {!! Form::label('updated_at', 'Updated At:') !!}
+    <p>{{ $lokasiKejahatan->updated_at }}</p>
 </div>
 

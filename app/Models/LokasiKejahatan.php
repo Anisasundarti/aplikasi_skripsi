@@ -8,26 +8,24 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class LokasiKejahatan
  * @package App\Models
- * @version December 18, 2020, 12:28 am UTC
+ * @version February 24, 2021, 10:57 am UTC
  *
- * @property \App\Models\JenisKejahatan $idJenisKejahatan
  * @property integer $id_jenis_kejahatan
- * @property string $nama_lokasi
  * @property string $alamat
  * @property string $gambar
  * @property string $deskripsi
- * @property string $latitude
- * @property string $longitude
+ * @property string $tahun_kejadian
+ * @property string $kelurahan
+ * @property string $kecamatan
+ * @property string $potensi_kerawanan
+ * @property string $koordinat
  */
 class LokasiKejahatan extends Model
 {
     use SoftDeletes;
 
-    public $table = 'lokasi_kejahatan';
+    public $table = 'lokasi_kejahatans';
     
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'updated_at';
-
 
     protected $dates = ['deleted_at'];
 
@@ -35,12 +33,14 @@ class LokasiKejahatan extends Model
 
     public $fillable = [
         'id_jenis_kejahatan',
-        'nama_lokasi',
         'alamat',
         'gambar',
         'deskripsi',
-        'latitude',
-        'longitude'
+        'tahun_kejadian',
+        'kelurahan',
+        'kecamatan',
+        'potensi_kerawanan',
+        'koordinat'
     ];
 
     /**
@@ -51,12 +51,14 @@ class LokasiKejahatan extends Model
     protected $casts = [
         'id' => 'integer',
         'id_jenis_kejahatan' => 'integer',
-        'nama_lokasi' => 'string',
         'alamat' => 'string',
-        'gambar' => 'string',
-        'deskripsi' => 'string',
-        'latitude' => 'string',
-        'longitude' => 'string'
+        'gambar'=> 'string',
+        'deskripsi'=> 'string',
+        'tahun_kejadian' => 'string',
+        'kelurahan' => 'string',
+        'kecamatan' => 'string',
+        'potensi_kerawanan' => 'string',
+        'koordinat' => 'string'
     ];
 
     /**
@@ -65,23 +67,19 @@ class LokasiKejahatan extends Model
      * @var array
      */
     public static $rules = [
-        'id_jenis_kejahatan' => 'nullable|integer',
-        'nama_lokasi' => 'nullable|string|max:255',
-        'alamat' => 'nullable|string|max:255',
-        'gambar' => 'nullable|string|max:255',
-        'deskripsi' => 'nullable|string|max:255',
-        'latitude' => 'nullable|string|max:255',
-        'longitude' => 'nullable|string|max:255',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable',
-        'deleted_at' => 'nullable'
+        'id_jenis_kejahatan' => 'required',
+        'alamat' => 'required',
+        'gambar' => 'required',
+        'deskripsi' => 'required',
+        'tahun_kejadian' => 'required',
+        'kelurahan' => 'required',
+        'kecamatan' => 'required',
+        'potensi_kerawanan' => 'required',
+        'koordinat' => 'required'
     ];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     **/
-    public function idJenisKejahatan()
-    {
-        return $this->belongsTo(\App\Models\JenisKejahatan::class, 'id_jenis_kejahatan');
+    public function JenisKejahatan(){
+        return $this->belongsTo('App\Models\JenisKejahatan','id_jenis_kejahatan','id');
     }
+    
 }

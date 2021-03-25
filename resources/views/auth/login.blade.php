@@ -34,8 +34,11 @@
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-    <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>InfyOm </b>Generator</a>
+    <div class="login-logo"> 
+        <img src="{{asset('Lambang_Polri.png')}}" style="width: 100px;height: 100px;">
+        <!-- <a href="{{ url('/home') }}"><b>SIG Daerah Rawan Kejahatan di Kota Samarinda </b></a> -->
+        <br><h3>
+         SIG Daerah Rawan Kejahatan Di Kota Samarinda </h3> 
     </div>
 
     <!-- /.login-logo -->
