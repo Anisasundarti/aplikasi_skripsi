@@ -4,22 +4,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>SIG DAERAH RAWAN KEJAHATAN KOTA SAMARINDA</title>
+        <title>SIG DARATAN</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <style>
-            html, body {
-                background-color: #1E90FF;
-                color: #FFFFFF;
+            body {
+                background-color: #FFFFFF;
+                /*color: #FFFFFF;*/
                 border: 100px;
                 font-family: 'Nunito', sans-serif;
                 font-weight: bold ;
                 font-style: italic ;
-                height: 100vh;
+                max-height: 100vh;
                 margin: 0;
+                
             }
             
             .full-height {
@@ -42,16 +43,13 @@
                 top: 18px;
             }
 
-            .content {
+            .title {
+                font-size: 40px;
                 text-align: center;
             }
 
-            .title {
-                font-size: 40px;
-            }
-
             .links > a {
-                color: #FFFFFF;
+                color: #000000;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -65,8 +63,9 @@
             }
         </style>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
+    <body class="background">
+
+        <div class="flex-center full-height position-ref " >
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -81,14 +80,14 @@
                 </div>
             @endif
 
-            <div class="content">
+         
                 <div class="title m-b-md">
-                    <img src="{{asset('Lambang_Polri.png')}}"style="width: 300px;height: 300px;"> 
+                    <img src="{{asset('Lambang_Polri.png')}}"style="width: 200px;height: 200px;"> 
                     <br> SISTEM INFORMASI GEOGRAFIS
-                    <br> DAERAH RAWAN KEJAHATAN KOTA SAMARINDA 
+                    <br> DAERAH RAWAN KEJAHATAN DI KECAMATAN LOA JANAN ILIR DAN KECAMATAN SAMARINDA SEBERANG 
+                    <br>KOTA SAMARINDA 
                 </div>
 
-            </div>
         </div>
     </body>
 </html>

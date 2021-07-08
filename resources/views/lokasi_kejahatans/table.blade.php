@@ -1,4 +1,14 @@
-<div class="table-responsive">
+<style type="text/css">
+    .scroll{
+        width: 1000px;
+        overflow-y: scroll;
+
+        max-height: 90vh;
+        
+        }
+</style>
+
+<div class="scroll" >
     <table class="table" id="lokasiKejahatans-table">
         <thead>
             <tr>
@@ -8,10 +18,7 @@
                 <th>Deskripsi</th>
                 <th>Tahun Kejadian</th>
                 <th>Kelurahan</th>
-                <th>Kecamatan</th>
-                <th>Potensi Kerawanan</th>
-                <th>Koordinat</th>
-                <th>Gambar</th>
+                
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -22,11 +29,9 @@
                 <td>{{ $lokasiKejahatan->JenisKejahatan->jenis_kejahatan }}</td>
                 <td>{{ $lokasiKejahatan->alamat }}</td>
                 <td>{{ $lokasiKejahatan->deskripsi }}</td>
-                <td>{{ $lokasiKejahatan->tahun_kejadian }}</td>
-                <td>{{ $lokasiKejahatan->kelurahan }}</td>
-                <td>{{ $lokasiKejahatan->kecamatan }}</td>
-                <td>{{ $lokasiKejahatan->potensi_kerawanan }}</td>
-                <td>{{ $lokasiKejahatan->koordinat }}</td>
+                <td>{{ $lokasiKejahatan->tahun->tahun_kejadian }}</td>
+                <td>{{ $lokasiKejahatan->kelurahan->kelurahan }}</td>
+                
                 <td>
                     <img src="{{asset('file_gambar/'.$lokasiKejahatan->gambar)}}" style="width:100px;heigth:100px;" alt="">
                 </td>

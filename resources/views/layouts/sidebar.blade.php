@@ -11,7 +11,7 @@
             </div>
             <div class="pull-left info">
                 @if (Auth::guest())
-                <p>SIG Daerah Rawan Kejahatan di Kota Samarinda</p>
+                <p>SIG DARATAN Kota Samarinda</p>
                 @else
                     <p>{{ Auth::user()->name}}</p>
                 @endif
@@ -32,7 +32,7 @@
         </form>
         <!-- Sidebar Menu -->
 
-        <ul class="sidebar-menu" data-widget="tree">
+        <ul class="sidebar-menu tree" data-widget="tree">
             @include('layouts.menu')
         </ul>
         <!-- /.sidebar-menu -->

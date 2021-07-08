@@ -12,11 +12,6 @@
     {!! Form::text('alamat', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Gambar Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('gambar', 'Gambar:') !!}
-    {!! Form::file('gambar', null, ['class' => 'form-control']) !!}
-</div>
 
 <!-- Deskripsi Field -->
 <div class="form-group col-sm-12 col-lg-12">
@@ -24,36 +19,20 @@
     {!! Form::textarea('deskripsi', null, ['class' => 'form-control']) !!}
 </div>
 
+
+
 <!-- Tahun Kejadian Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('tahun_kejadian', 'Tahun Kejadian:') !!}
-    {!! Form::text('tahun_kejadian', null, ['class' => 'form-control']) !!}
+    {!! Form::label('tahun_id', 'Tahun Kejadian:') !!}
+   {!! Form::select('tahun_id', $tahunItems, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Kelurahan Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('kelurahan', 'Kelurahan:') !!}
-    {!! Form::text('kelurahan', null, ['class' => 'form-control']) !!}
+    {!! Form::label('kelurahan_id', 'Kelurahan:') !!}
+    {!! Form::select('kelurahan_id', $kelurahanItems, null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Kecamatan Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('kecamatan', 'Kecamatan:') !!}
-    {!! Form::text('kecamatan', null, ['class' => 'form-control']) !!}
-</div>
-
-
-<!-- Potensi Kerawanan Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('potensi_kerawanan', 'Potensi Kerawanan:') !!}
-    {!! Form::text('potensi_kerawanan', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Koordinat Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('koordinat', 'Koordinat:') !!}
-    {!! Form::file('koordinat', null, ['class' => 'form-control']) !!}
-</div>
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">

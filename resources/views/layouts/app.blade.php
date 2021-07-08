@@ -35,7 +35,7 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b>SIG DaRaTan Samarinda</b>
+                <b>SIG Daratan Samarinda</b>
             </a>
 
             <!-- Header Navbar -->
@@ -77,7 +77,10 @@
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             Sign out
                                         </a>
+
+
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+
                                             @csrf
                                         </form>
                                     </div>
@@ -93,12 +96,14 @@
         @include('layouts.sidebar')
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            @yield('content')
-        </div>
+            @yield('content') 
 
+        </div>
+        
         <!-- Main Footer -->
+
         <footer class="main-footer" style="max-height: 100px;text-align: center">
-            <strong>Copyright © 2016 <a href="#">Company</a>.</strong> All rights reserved.
+            <strong>Copyright © 2021 | Program ini dibuat Anisa Sundarti.</strong> 
         </footer>
 
     </div>
@@ -118,7 +123,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    SIG DaRaTan di Kota Samarinda 
+                    SIG DARATAN Kota Samarinda 
                 </a>
             </div>
 

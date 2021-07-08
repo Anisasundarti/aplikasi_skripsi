@@ -18,13 +18,10 @@ class CreateLokasiKejahatansTable extends Migration
             $table->increments('id');
             $table->integer('id_jenis_kejahatan');
             $table->string('alamat');
-            $table->string('gambar');
             $table->longtext('deskripsi');
             $table->string('tahun_kejadian');
             $table->string('kelurahan');
             $table->string('kecamatan');
-            $table->string('potensi_kerawanan');
-            $table->string('koordinat');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -19,13 +19,11 @@ class LokasiKejahatanRepository extends BaseRepository
     protected $fieldSearchable = [
         'id_jenis_kejahatan',
         'alamat',
-        'gambar',
         'deskripsi',
         'tahun_kejadian',
         'kelurahan',
         'kecamatan',
-        'potensi_kerawanan',
-        'koordinat'
+     
     ];
 
     /**

@@ -34,13 +34,9 @@ class LokasiKejahatan extends Model
     public $fillable = [
         'id_jenis_kejahatan',
         'alamat',
-        'gambar',
         'deskripsi',
-        'tahun_kejadian',
-        'kelurahan',
-        'kecamatan',
-        'potensi_kerawanan',
-        'koordinat'
+        'tahun_id',
+        'kelurahan_id'
     ];
 
     /**
@@ -52,13 +48,10 @@ class LokasiKejahatan extends Model
         'id' => 'integer',
         'id_jenis_kejahatan' => 'integer',
         'alamat' => 'string',
-        'gambar'=> 'string',
         'deskripsi'=> 'string',
-        'tahun_kejadian' => 'string',
-        'kelurahan' => 'string',
-        'kecamatan' => 'string',
-        'potensi_kerawanan' => 'string',
-        'koordinat' => 'string'
+        'tahun_id' => 'integer',
+        'kelurahan_id' => 'integer',
+
     ];
 
     /**
@@ -69,17 +62,24 @@ class LokasiKejahatan extends Model
     public static $rules = [
         'id_jenis_kejahatan' => 'required',
         'alamat' => 'required',
-        'gambar' => 'required',
         'deskripsi' => 'required',
-        'tahun_kejadian' => 'required',
-        'kelurahan' => 'required',
-        'kecamatan' => 'required',
-        'potensi_kerawanan' => 'required',
-        'koordinat' => 'required'
+        'tahun_id' => 'required',
+        'kelurahan_id' => 'required',
     ];
 
     public function JenisKejahatan(){
         return $this->belongsTo('App\Models\JenisKejahatan','id_jenis_kejahatan','id');
+
+    }
+
+    public function Tahun(){
+        return $this->belongsTo('App\Models\Tahun','tahun_id','id');
+        
+    }
+
+    public function Kelurahan(){
+        return $this->belongsTo('App\Models\Kelurahan','kelurahan_id','id');
+        
     }
     
 }

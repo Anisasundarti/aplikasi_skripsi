@@ -1,6 +1,14 @@
 @extends('layouts.app')
+<!DOCTYPE html>
+<html>
+<head>
+   <title>SIG DARATAN | Jenis Kejahatan</title>
+
+</head>
+<body>
 
 @section('content')
+
     <section class="content-header">
         <h1>
             Jenis Kejahatan

@@ -63,28 +63,25 @@ class LokasiKejahatanController extends AppBaseController
         // $lokasiKejahatan = $this->lokasiKejahatanRepository->create($input);
 
         // menyimpan data file yang diupload ke variabel $file
-		$file_gambar = $request->file('gambar');
-		echo $nama_file_gambar = time()."_".$file_gambar->getClientOriginalName();
-      	// isi dengan nama folder tempat kemana file diupload
-		$tujuan_upload_gambar = 'file_gambar';
-		$file_gambar->move($tujuan_upload_gambar,$nama_file_gambar);
+		// $file_gambar = $request->file('gambar');
+		// echo $nama_file_gambar = time()."_".$file_gambar->getClientOriginalName();
+  //     	// isi dengan nama folder tempat kemana file diupload
+		// $tujuan_upload_gambar = 'file_gambar';
+		// $file_gambar->move($tujuan_upload_gambar,$nama_file_gambar);
 
-        $file_koordinat = $request->file('koordinat');
-		echo $nama_file_koordinat = time()."_".$file_koordinat->getClientOriginalName();
-      	// isi dengan nama folder tempat kemana file diupload
-		$tujuan_upload_koordinat = 'file_koordinat';
-		$file_koordinat->move($tujuan_upload_koordinat,$nama_file_koordinat);
+  //       $file_koordinat = $request->file('koordinat');
+		// echo $nama_file_koordinat = time()."_".$file_koordinat->getClientOriginalName();
+  //     	// isi dengan nama folder tempat kemana file diupload
+		// $tujuan_upload_koordinat = 'file_koordinat';
+		// $file_koordinat->move($tujuan_upload_koordinat,$nama_file_koordinat);
  
 		$lokasiKejahatan = new LokasiKejahatan;
         $lokasiKejahatan->id_jenis_kejahatan = $request->id_jenis_kejahatan;
         $lokasiKejahatan->alamat = $request->alamat;
-        $lokasiKejahatan->gambar = $nama_file_gambar;
         $lokasiKejahatan->deskripsi = $request->deskripsi;
-        $lokasiKejahatan->tahun_kejadian = $request->tahun_kejadian;
-        $lokasiKejahatan->kelurahan = $request->kelurahan;
-        $lokasiKejahatan->kecamatan = $request->kecamatan;
-        $lokasiKejahatan->potensi_kerawanan = $request->potensi_kerawanan;
-        $lokasiKejahatan->koordinat = $nama_file_koordinat;
+        $lokasiKejahatan->tahun_id = $request->tahun_id;
+        $lokasiKejahatan->kelurahan_id = $request->kelurahan_id;
+       
         $lokasiKejahatan->save();
         Flash::success('Lokasi Kejahatan saved successfully.');
 
@@ -109,6 +106,7 @@ class LokasiKejahatanController extends AppBaseController
         }
 
         return view('lokasi_kejahatans.show')->with('lokasiKejahatan', $lokasiKejahatan);
+        lokasiKejahatan::all()->orderBy('tahun_id','asc');
     }
 
     /**

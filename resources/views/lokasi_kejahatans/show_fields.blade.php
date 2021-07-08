@@ -12,10 +12,10 @@
 </div>
 
 <!-- Gambar Field -->
-<div class="form-group">
+<!-- <div class="form-group">
     {!! Form::label('gambar', 'Gambar:') !!}
     <p>{{ $lokasiKejahatan->gambar }}</p>
-</div>
+</div> -->
 
 <!-- Deskripsi Field -->
 <div class="form-group">
@@ -41,17 +41,6 @@
     <p>{{ $lokasiKejahatan->kecamatan }}</p>
 </div>
 
-<!-- Potensi Kerawanan Field -->
-<div class="form-group">
-    {!! Form::label('potensi_kerawanan', 'Potensi Kerawanan:') !!}
-    <p>{{ $lokasiKejahatan->potensi_kerawanan }}</p>
-</div>
-
-<!-- Koordinat Field -->
-<div class="form-group">
-    {!! Form::label('koordinat', 'Koordinat:') !!}
-    <p>{{ $lokasiKejahatan->koordinat }}</p>
-</div>
 
 <!-- Created At Field -->
 <div class="form-group">

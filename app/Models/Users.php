@@ -39,7 +39,8 @@ class Users extends Model
         'password',
         'alamat',
         'telepon',
-        'remember_token'
+        'remember_token',
+        'is_admin'
     ];
 
     /**
@@ -55,7 +56,8 @@ class Users extends Model
         'password' => 'string',
         'alamat' => 'string',
         'telepon' => 'string',
-        'remember_token' => 'string'
+        'remember_token' => 'string',
+        'is_admin'=> 'boolean'
     ];
 
     /**
@@ -73,7 +75,8 @@ class Users extends Model
         'remember_token' => 'nullable|string|max:100',
         'created_at' => 'nullable',
         'updated_at' => 'nullable',
-        'deleted_at' => 'nullable'
+        'deleted_at' => 'nullable',
+        'is_admin' => 'nullable'
     ];
 
     
